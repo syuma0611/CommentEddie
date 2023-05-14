@@ -1,0 +1,51 @@
+:root {
+  /** フェードインの方向 */
+  --fade-in-translateX: -150px;/* 左から右(-150px) 右から左(150px)*/
+  --fade-in-translateY: 0px;/* 下から上(150px) 上から下(-150px)*/
+
+  /** フェードアウトを指せるかどうか */
+  --window-opacity: 0;/* 0:フードアウト 1：フェードアウトしない*/
+}
+
+
+.MuiList-root>div>div>div>div {
+  /* アニメーション名の指定：@keyframesと名前をそろえる */
+  animation-name: fadeLeftToRight;
+  /* 再生時間：短いほどフェードインが早くなる */
+  animation-duration: 8s;
+  /* アニメーション終了後の動き
+  　：forwards⇒最後の状態を保持、backwards⇒最初に戻る */
+  animation-fill-mode:forwards;
+  /* 繰り返し回数 */
+  animation-iteration-count:1;
+  /* 滑らかに動くためのおまじない */
+  animation-timing-function:ease;
+  /* 表示されてからアニメーション開始するまでの時間 */
+  animation-delay: 0s;
+  /* 気にしないでください */
+    animation-direction:normal;
+}
+
+@keyframes fadeLeftToRight {
+  0% {
+    /* 透明度：0⇒透明、1⇒不透明 */
+    opacity: 0;
+    /* 横の動き */
+   transform: translate(var(--fade-in-translateX),var(--fade-in-translateY));
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: var(--window-opacity);
+    transform: translateX(0);
+  }
+}
