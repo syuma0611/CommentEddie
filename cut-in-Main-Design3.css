@@ -358,7 +358,7 @@ span.MuiTypography-root.MuiTypography-caption {
 /*--------------ダイス表示に関するcss----------------*/
 
  :root {
-   --dice-Y: 210px; /**ダイス表示のY軸の高さ */
+   --dice-Y: 230px; /**ダイス表示のY軸の高さ */
    --dice-X: -80px; /**ダイス表示のX軸位置 */
     --dice-pic-size: 80px; /**ダイスの画像の大きさ */
  }
