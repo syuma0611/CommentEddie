@@ -228,9 +228,9 @@ span.MuiTypography-root.MuiTypography-caption {
   --icon-top: -20px;/* アイコン画像のX座標 */
 
  /** ウィンドウの文字幅の調整 */
-　--border-padding-top: 0px;
-　--border-padding-bottom: 0px;
-　--border-padding-left: 20px;
+ --border-padding-top: 0px;
+ --border-padding-bottom: 0px;
+ --border-padding-left: 20px;
 }
 
 
@@ -253,10 +253,10 @@ span.MuiTypography-root.MuiTypography-caption {
    z-index: 3 !important;
  }
  
- /** ウィンドウの文字幅の調整 */
+ /** ウィンドウの幅の調整 */
  .MuiListItem-root {
    padding-top: var(--border-padding-top) !important;
-   padding-bottom: var(--border-padding-bottom) !important;
+   padding-bottom:var(--border-padding-bottom) !important;
    padding-left: var(--border-padding-left) !important;
    overflow: hidden !important;
  }
@@ -274,4 +274,4 @@ span.MuiTypography-root.MuiTypography-caption {
   width: var(--icon-width) !important;
 }
 
- /*--------------新規デザイン用に追記した部分ここまで----------------*/
+/*--------------新規デザイン用に追記した部分ここまで----------------*/
