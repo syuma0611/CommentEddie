@@ -1,0 +1,34 @@
+/*表示件数*/
+.MuiList-root>div>div>div>div:nth-last-child(-n+1) {
+    display: block !important;
+}
+
+:root {
+  /** ウィンドウの高さ */
+  --window-height: 215px;
+}
+
+.MuiList-root > div > div > div > div {
+ height: var(--window-height) !important; /** 結果の高さ調整 */
+ padding-bottom: 0px !important;/*ウィンドウ枠の余白をなくす設定 消すと余白が生まれます*/
+ padding-right: 0px !important;/*ウィンドウ枠の余白をなくす設定 消すと余白が生まれます*
+}
+
+:root {
+/**************************
+   表示項目の設定　（デザイン変更したい場合ここに加筆）
+ 項目は　https://ghgantz.github.io/customCss/ccfolia/chat.css を確認
+**************************/
+ /** ウィンド文字の大きさ */
+  --font-size-result: 1.6rem;
+  --font-size-success: 1.4rem;
+  --font-size-user-name: 1.6rem;
+
+ /** ウィンドウの文字幅の調整 */
+  --border-padding-top: 0px;
+  --border-padding-bottom: 150px;
+  --border-padding-left: 20px;
+
+  /** ダイスを振った時間を表示するか */
+  --disp-dice-time: transparent /** none⇒表示しない、transparent⇒表示する */
+}
