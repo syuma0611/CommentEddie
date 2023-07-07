@@ -262,7 +262,7 @@ span.MuiTypography-root.MuiTypography-caption {
  }
 
 /**　チャット欄アイコン背景  **/
-.kLyA-dF {
+.sc-lkwKjF {
   width: var(--icon-width) !important;
   height: var(--icon-height) !important;
   background: var(--icon-background-color) !important;
@@ -270,7 +270,7 @@ span.MuiTypography-root.MuiTypography-caption {
 }
 
 /** チャット欄アイコン画像 **/
-.kLyA-dF img {
+.sc-lkwKjF img {
   width: var(--icon-width) !important;
 }
 
