@@ -62,62 +62,21 @@ body {
 }
 
 /**************************
- 非表示項目の設定
+ 非表示要素の設定
 **************************/
-/* カットイン */
-div[open],
-/* 背景 */
-.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionFixed.MuiAppBar-colorDefault.MuiPaper-elevation0+div,
-/* 盤面 */
-div[tabindex="0"]>div:nth-child(1),
-/* キャラ */
-.MuiButtonBase-root+div+div:not(.MuiPaper-root),
-.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded+div 
-{
-  display: none !important;
-}
 
-
-/**************************
-　共通
-**************************/
-/* モーダル削除 */
-[role="presentation"],
-/* ヘッダー削除 */
-/* headerのみだとチャットのタブも消える */
-header>.MuiToolbar-gutters,
-/* 音量 */
-div[tabindex="0"]>div:nth-child(3),
-/* 拡大縮小 */
-.MuiButtonBase-root+div,
-/* 鉛筆ボタン */
-.MuiButtonBase-root.MuiFab-root,
-/* 監視モード */
+/** ツールバー */
+.MuiToolbar-regular,
+/** ダイス結果、チャット入力欄の削除 */
+.MuiPaper-elevation1,
+/** 背景の非表示 */
+#root>div>div:nth-child(2),
+/** 前景全体 */
+#root>div>div:nth-child(3),
+/** 監視モード注釈の削除 */
 .MuiSnackbar-root,
-/* タイマー */
-.MuiPaper-elevation5,
-/* スクロールバー */
-::-webkit-scrollbar {
-  display: none !important;
-}
-
-/* 盤面 */
-div[tabindex="0"] {
-  width: 100% !important;
-}
-
 /** 広告の削除 */
-.MuiDialog-scrollPaper {
-  display: none !important;
-  /** 広告画像の削除 */
-}
-.MuiBackdrop-root {
-  background: rgba(0, 0, 0, 0) !important;
-  /** 広告背景の削除 */
-}
-
-/** スクロールバーの削除 */
-::-webkit-scrollbar {
+.MuiDialog-root {
   display: none !important;
 }
 
@@ -269,9 +228,9 @@ span.MuiTypography-root.MuiTypography-caption {
   --icon-top: -20px;/* アイコン画像のX座標 */
 
  /** ウィンドウの文字幅の調整 */
- --border-padding-top: 0px;
- --border-padding-bottom: 0px;
- --border-padding-left: 20px;
+　--border-padding-top: 0px;
+　--border-padding-bottom: 0px;
+　--border-padding-left: 20px;
 }
 
 
@@ -293,17 +252,17 @@ span.MuiTypography-root.MuiTypography-caption {
  .MuiListItemText-root {
    z-index: 3 !important;
  }
- 
- /** ウィンドウの幅の調整 */
+
+ /** ウィンドウの文字幅の調整 */
  .MuiListItem-root {
    padding-top: var(--border-padding-top) !important;
-   padding-bottom:var(--border-padding-bottom) !important;
+   padding-bottom: var(--border-padding-bottom) !important;
    padding-left: var(--border-padding-left) !important;
    overflow: hidden !important;
  }
 
 /**　チャット欄アイコン背景  **/
-.sc-lkwKjF {
+.hymBZO {
   width: var(--icon-width) !important;
   height: var(--icon-height) !important;
   background: var(--icon-background-color) !important;
@@ -311,86 +270,8 @@ span.MuiTypography-root.MuiTypography-caption {
 }
 
 /** チャット欄アイコン画像 **/
-.sc-lkwKjF img {
+.hymBZO img {
   width: var(--icon-width) !important;
 }
 
-/*--------------新規デザイン用に追記した部分ここまで----------------*/
-
-/*--------------メインウィンドウ風に記載するcss----------------*/
-/*表示件数*/
-.MuiList-root>div>div>div>div:nth-last-child(-n+1) {
-    display: block !important;
-}
-
-:root {
-  /** ウィンドウの高さ */
-  --window-height: 215px;
-}
-
-.MuiList-root > div > div > div > div {
- height: var(--window-height) !important; /** 結果の高さ調整 */
- padding-bottom: 0px !important;/*ウィンドウ枠の余白をなくす設定 消すと余白が生まれます*/
- padding-right: 0px !important;/*ウィンドウ枠の余白をなくす設定 消すと余白が生まれます*
-}
-
-:root {
-/**************************
-   表示項目の設定　（デザイン変更したい場合ここに加筆）
- 項目は　https://ghgantz.github.io/customCss/ccfolia/chat.css を確認
-**************************/
- /** ウィンド文字の大きさ */
-  --font-size-result: 1.6rem;
-  --font-size-success: 1.4rem;
-  --font-size-user-name: 1.6rem;
-
- /** ウィンドウの文字幅の調整 */
-  --border-padding-top: 0px;
-  --border-padding-bottom: 150px;
-  --border-padding-left: 20px;
-
-  /** ダイスを振った時間を表示するか */
-  --disp-dice-time: transparent /** none⇒表示しない、transparent⇒表示する */
-}
-
-/*--------------メインウィンドウ風に記載するcssここまで----------------*/
-
-/*--------------ダイス表示に関するcss----------------*/
-
- :root {
-   --dice-Y: 230px; /**ダイス表示のY軸の高さ */
-   --dice-X: -80px; /**ダイス表示のX軸位置 */
-    --dice-pic-size: 80px; /**ダイスの画像の大きさ */
- }
-
-/**サイコロ画像の編集*/
-.MuiPaper-root{
- margin: 0em!important;
-}
-
-/**関係ないものを非表示*/
-.sc-jWEIYm,
-.sc-jDDxOa,
-.MuiSvgIcon-root,
-.TAqeW,
-.sc-kTGBUR,
-.sc-ddcaxn{
- display: none !important;
-}
-
-.knYIyr{
-  width: var(--dice-pic-size) !important;
-  height: var(--dice-pic-size) !important;
-}
-
-.dAepyZ {
-  /** 上下位置の調整 */
-  bottom: var(--dice-Y) !important;
-  /** 右側のスペースの幅 */
-  right: var(--dice-X) !important;
-
-　/** 左側のスペースの幅 */
-  margin-left:0px !important;
-  /** 画像が表示される範囲 */
-  max-width: 600px !important;
-}
+ /*--------------新規デザイン用に追記した部分ここまで----------------*/
