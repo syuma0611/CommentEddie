@@ -188,7 +188,7 @@ hr {
   border-radius: var(--icon-radius) !important;
 }
 /** チャット欄アイコン画像 */
-.gWULzu img {
+.hymBZO img {
   width: var(--icon-width) !important;
 }
 
@@ -303,7 +303,7 @@ span.MuiTypography-root.MuiTypography-caption {
  }
 
 /**　チャット欄アイコン背景  **/
-.kLyA-dF {
+.hymBZO {
   width: var(--icon-width) !important;
   height: var(--icon-height) !important;
   background: var(--icon-background-color) !important;
@@ -311,7 +311,7 @@ span.MuiTypography-root.MuiTypography-caption {
 }
 
 /** チャット欄アイコン画像 **/
-.kLyA-dF img {
+.hymBZO img {
   width: var(--icon-width) !important;
 }
 
@@ -374,6 +374,49 @@ span.MuiTypography-root.MuiTypography-caption {
 .sc-cjbZfG,
 .MuiSvgIcon-root,
 .TAqeW,
+.sc-ddcaxn{
+ display: none !important;
+}
+
+.xIneB{
+  width: var(--dice-pic-size) !important;
+  height: var(--dice-pic-size) !important;
+}
+
+.hzbege {
+  /** 上下位置の調整 */
+  bottom: var(--dice-Y) !important;
+  /** 右側のスペースの幅 */
+  right: var(--dice-X) !important;
+
+　/** 左側のスペースの幅 */
+  margin-left:0px !important;
+  /** 画像が表示される範囲 */
+  max-width: 600px !important;
+}
+
+/*--------------ダイス表示に関するcssここまで----------------*/
+
+/*--------------ダイス表示に関するcss----------------*/
+
+ :root {
+   --dice-Y: 230px; /**ダイス表示のY軸の高さ */
+   --dice-X: -80px; /**ダイス表示のX軸位置 */
+    --dice-pic-size: 80px; /**ダイスの画像の大きさ */
+ }
+
+/**サイコロ画像の編集*/
+.MuiPaper-root{
+ margin: 0em!important;
+}
+
+/**関係ないものを非表示*/
+.sc-jWEIYm,
+.sc-jDDxOa,
+.MuiSvgIcon-root,
+.TAqeW,
+.sc-hbjaKc,
+.sc-cgFpzT,
 .sc-ddcaxn{
  display: none !important;
 }
