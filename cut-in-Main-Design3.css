@@ -9,7 +9,7 @@
   --is-top: auto; /* 上揃えの場合⇒0、下揃えの場合⇒auto */
   --is-bottom: 0; /* 上揃えの場合⇒auto、下揃えの場合⇒0 */
   /** ダイス結果背景 */
-  --width: 500px; /** 結果の横幅 */
+  --width: 800px; /** 結果の横幅 */
   --background-color: rgba(0, 0, 0, 0.6); /** 背景色 */
   --background-padding: 8px 18px 8px 18px; /** 外枠と文字の隙間 */
   --border-color: rgba(255, 255, 255, 1); /** 枠線の色 */
@@ -22,8 +22,8 @@
   /** アイコン画像の設定 */
   --icon-radius: 30%; /** 画像の丸み：0%⇒四角、50%⇒正円 */
   --icon-background-color: transparent; /** アイコン背景色：transparentで透明 */
-  --icon-width: 70px; /** 画像の横幅 */
-  --icon-height: 70px; /** 画像の高さ */
+  --icon-width: 300px; /** 画像の横幅 */
+  --icon-height: 207px; /** 画像の高さ */
   --icon-margin-top: 0px; /** アイコン上のスペース */
   --icon-margin-bottom: 0px; /** アイコン下のスペース */
   --icon-margin-left: -20px; /** アイコン左のスペース */
@@ -188,7 +188,7 @@ hr {
   border-radius: var(--icon-radius) !important;
 }
 /** チャット欄アイコン画像 */
-.hymBZO img {
+.fVslwa img {
   width: var(--icon-width) !important;
 }
 
@@ -262,7 +262,7 @@ span.MuiTypography-root.MuiTypography-caption {
 
 :root {
   /** アイコンの画像位置調整 */
-  --icon-position-left: 500px;/* アイコン画像のY座標 */
+  --icon-position-left: 570px;/* アイコン画像のY座標 */
 
  /** アイコン画像の設定 */
   --icon-opacity: 0.75;/* 画像の不透明度　0：透明、1：不透明 */
@@ -303,7 +303,7 @@ span.MuiTypography-root.MuiTypography-caption {
  }
 
 /**　チャット欄アイコン背景  **/
-.hymBZO {
+.fVslwa {
   width: var(--icon-width) !important;
   height: var(--icon-height) !important;
   background: var(--icon-background-color) !important;
@@ -311,9 +311,11 @@ span.MuiTypography-root.MuiTypography-caption {
 }
 
 /** チャット欄アイコン画像 **/
-.hymBZO img {
+.fVslwa img {
   width: var(--icon-width) !important;
 }
+
+
 
 /*--------------新規デザイン用に追記した部分ここまで----------------*/
 
@@ -369,64 +371,27 @@ span.MuiTypography-root.MuiTypography-caption {
 }
 
 /**関係ないものを非表示*/
-.sc-egNfGp,
-.sc-olbas,
-.sc-cjbZfG,
+.sc-dUWWNf,
+.MuiToolbar-dense,
+.sc-ekGZSs,
 .MuiSvgIcon-root,
-.TAqeW,
-.sc-ddcaxn{
+.sc-btIRyd,
+.sc-ddcaxn,
+.sc-dSuTWQ{
  display: none !important;
 }
 
-.xIneB{
+/** 新ダイス表記の非表示 */
+.sc-bPPhlf{
+  display: none;
+} Vslwa
+
+.jDTQmL img{
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
 
-.hzbege {
-  /** 上下位置の調整 */
-  bottom: var(--dice-Y) !important;
-  /** 右側のスペースの幅 */
-  right: var(--dice-X) !important;
-
-　/** 左側のスペースの幅 */
-  margin-left:0px !important;
-  /** 画像が表示される範囲 */
-  max-width: 600px !important;
-}
-
-/*--------------ダイス表示に関するcssここまで----------------*/
-
-/*--------------ダイス表示に関するcss----------------*/
-
- :root {
-   --dice-Y: 230px; /**ダイス表示のY軸の高さ */
-   --dice-X: -80px; /**ダイス表示のX軸位置 */
-    --dice-pic-size: 80px; /**ダイスの画像の大きさ */
- }
-
-/**サイコロ画像の編集*/
-.MuiPaper-root{
- margin: 0em!important;
-}
-
-/**関係ないものを非表示*/
-.sc-jWEIYm,
-.sc-jDDxOa,
-.MuiSvgIcon-root,
-.TAqeW,
-.sc-hbjaKc,
-.sc-cgFpzT,
-.sc-ddcaxn{
- display: none !important;
-}
-
-.knYIyr{
-  width: var(--dice-pic-size) !important;
-  height: var(--dice-pic-size) !important;
-}
-
-.dAepyZ {
+.jDTQmL {
   /** 上下位置の調整 */
   bottom: var(--dice-Y) !important;
   /** 右側のスペースの幅 */
