@@ -1,24 +1,11 @@
 /** チャット種別が出るようにするための調整 **/
-.MuiPaper-root {
+.MuiPaper-root > form {
   display: flex!important;
 }
 
-/* カットイン */
-.cYLNGJ,
-/* 吹き出し */
-.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded, 
-/* 名前 */
+/* 入力欄とかを差削除 */
 .MuiInputBase-root,
-/* 入力欄 */
-.sc-eEOqmf,
-/*バージョン表記*/
-.MuiBox-root,
-/* 監視モード */
-.MuiSnackbar-root,
-/* モーダル削除 */
-[role="presentation"],
-/* ヘッダー削除 */
-header>.MuiToolbar-gutters {
+.MuiPaper-root > form > div{
   display: none !important;
 }
 
