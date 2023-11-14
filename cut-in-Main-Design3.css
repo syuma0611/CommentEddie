@@ -33,11 +33,11 @@
   --font-color-result: rgba(255, 255, 255, 1);
   --font-shadow-result: 2px 2px 3px black; /** 読み方）X軸 Y軸 影の幅 色 */
   /** 成功時の青文字部分 */
-  --font-size-success: 1.1rem;
+  --font-size-success: 1.2rem;
   --font-color-success: rgba(134, 202, 255, 1);
   --font-shadow-success: 2px 2px 3px black; /** 読み方）X軸 Y軸 影の幅 色 */
   /** 失敗時の赤文字部分 */
-  --font-size-fail: 1.1rem;
+  --font-size-fail: 1.2rem;
   --font-color-fail: rgba(255, 161, 161, 1);
   --font-shadow-fail: 2px 2px 3px black; /** 読み方）X軸 Y軸 影の幅 色 */
   /** ユーザ名の部分 */
@@ -52,14 +52,15 @@
 }
 
 /**************************
- OBS用のおまじない
-**************************/
+   OBS用のおまじない
+  **************************/
 
 body {
-  background-color: rgba(0, 0, 0, 0);
-  margin: 0px auto;
-  overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0px auto;
+    overflow: hidden;
 }
+
 
 /**************************
  非表示項目の設定
@@ -70,10 +71,16 @@ div[open],
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionFixed.MuiAppBar-colorDefault.MuiPaper-elevation0+div,
 /* 盤面 */
 div[tabindex="0"]>div:nth-child(1),
-/* キャラ */
-.MuiButtonBase-root+div+div:not(.MuiPaper-root),
-.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded+div 
-{
+/*
+  キャラ
+  6: 初期位置
+  7: タイマー or 吹き出し
+  8: タイマー and 吹き出し
+  ※拡大縮小が消える不都合あり
+*/
+[tabindex="0"]>div:nth-child(6):not(.MuiPaper-root),
+[tabindex="0"]>div:nth-child(7):not(.MuiPaper-root),
+[tabindex="0"]>div:nth-child(8):not(.MuiPaper-root){
   display: none !important;
 }
 
@@ -89,13 +96,18 @@ header>.MuiToolbar-gutters,
 /* 音量 */
 div[tabindex="0"]>div:nth-child(3),
 /* 拡大縮小 */
-.MuiButtonBase-root+div,
+button.MuiButtonBase-root:not(.MuiTab-root),
+button.MuiButtonBase-root+span,
 /* 鉛筆ボタン */
 .MuiButtonBase-root.MuiFab-root,
 /* 監視モード */
 .MuiSnackbar-root,
 /* タイマー */
 .MuiPaper-elevation5,
+/** ダイス結果、チャット入力欄の削除 */
+.MuiPaper-root > form,
+/* 新しいダイスを非表示 */
+div[style="position: relative; width: 100%; height: 100%; overflow: hidden;"],
 /* スクロールバー */
 ::-webkit-scrollbar {
   display: none !important;
@@ -106,6 +118,12 @@ div[tabindex="0"] {
   width: 100% !important;
 }
 
+header.MuiPaper-elevation{
+  display: none !important;
+  /** ヘッダー削除 */
+}
+
+
 /** 広告の削除 */
 .MuiDialog-scrollPaper {
   display: none !important;
@@ -114,11 +132,6 @@ div[tabindex="0"] {
 .MuiBackdrop-root {
   background: rgba(0, 0, 0, 0) !important;
   /** 広告背景の削除 */
-}
-
-/** スクロールバーの削除 */
-::-webkit-scrollbar {
-  display: none !important;
 }
 
 /**************************
@@ -188,7 +201,7 @@ hr {
   border-radius: var(--icon-radius) !important;
 }
 /** チャット欄アイコン画像 */
-.fVslwa img {
+.MuiListItemAvatar-root > div img {
   width: var(--icon-width) !important;
 }
 
@@ -225,14 +238,14 @@ p.MuiTypography-root {
 }
 
 /** 成功時の青文字部分 */
-.MuiTypography-colorPrimary {
+.css-1l6qhgm {
   color: var(--font-color-success) !important;
   text-shadow: var(--font-shadow-success) !important;
   font-size: var(--font-size-success) !important;
 }
 
 /* 失敗時の赤字部分 */
-.MuiTypography-colorSecondary {
+.css-1j13mke {
   color: var(--font-color-fail) !important;
   text-shadow: var(--font-shadow-fail) !important;
   font-size: var(--font-size-fail) !important;
@@ -302,19 +315,6 @@ span.MuiTypography-root.MuiTypography-caption {
    overflow: hidden !important;
  }
 
-/**　チャット欄アイコン背景  **/
-.fVslwa {
-  width: var(--icon-width) !important;
-  height: var(--icon-height) !important;
-  background: var(--icon-background-color) !important;
-  border-radius: var(--icon-radius) !important;
-}
-
-/** チャット欄アイコン画像 **/
-.fVslwa img {
-  width: var(--icon-width) !important;
-}
-
 
 
 /*--------------新規デザイン用に追記した部分ここまで----------------*/
@@ -343,7 +343,8 @@ span.MuiTypography-root.MuiTypography-caption {
 **************************/
  /** ウィンド文字の大きさ */
   --font-size-result: 1.6rem;
-  --font-size-success: 1.4rem;
+  --font-size-success: 1.3rem;
+  --font-size-fail: 1.3rem;
   --font-size-user-name: 1.6rem;
 
  /** ウィンドウの文字幅の調整 */
@@ -362,7 +363,7 @@ span.MuiTypography-root.MuiTypography-caption {
  :root {
    --dice-Y: 230px; /**ダイス表示のY軸の高さ */
    --dice-X: -80px; /**ダイス表示のX軸位置 */
-    --dice-pic-size: 80px; /**ダイスの画像の大きさ */
+   --dice-pic-size: 70px; /**ダイスの画像の大きさ */
  }
 
 /**サイコロ画像の編集*/
@@ -371,27 +372,25 @@ span.MuiTypography-root.MuiTypography-caption {
 }
 
 /**関係ないものを非表示*/
-.sc-dUWWNf,
 .MuiToolbar-dense,
-.sc-ekGZSs,
-.MuiSvgIcon-root,
-.sc-btIRyd,
-.sc-ddcaxn,
-.sc-dSuTWQ{
+.sc-dSuTWQ,
+.sc-gswEsP,
+.sc-hlXyLs{
  display: none !important;
 }
 
 /** 新ダイス表記の非表示 */
 .sc-bPPhlf{
   display: none;
-} Vslwa
+} 
 
-.jDTQmL img{
+
+img[src*="dice"]{
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
 
-.jDTQmL {
+.cMNEPM {
   /** 上下位置の調整 */
   bottom: var(--dice-Y) !important;
   /** 右側のスペースの幅 */
@@ -402,5 +401,6 @@ span.MuiTypography-root.MuiTypography-caption {
   /** 画像が表示される範囲 */
   max-width: 600px !important;
 }
+
 
 /*--------------ダイス表示に関するcssここまで----------------*/
