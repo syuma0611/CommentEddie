@@ -21,7 +21,8 @@
 **************************/
  /** ウィンド文字の大きさ */
   --font-size-result: 1.6rem;
-  --font-size-success: 1.4rem;
+  --font-size-success: 1.3rem;
+  --font-size-fail: 1.3rem;
   --font-size-user-name: 1.6rem;
 
  /** ウィンドウの文字幅の調整 */
