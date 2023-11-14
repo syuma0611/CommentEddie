@@ -363,7 +363,7 @@ span.MuiTypography-root.MuiTypography-caption {
  :root {
    --dice-Y: 230px; /**ダイス表示のY軸の高さ */
    --dice-X: -80px; /**ダイス表示のX軸位置 */
-   --dice-pic-size: 70px; /**ダイスの画像の大きさ */
+   --dice-pic-size: 100px; /**ダイスの画像の大きさ */
  }
 
 /**サイコロ画像の編集*/
@@ -385,7 +385,7 @@ span.MuiTypography-root.MuiTypography-caption {
 } 
 
 
-img[src*="dice"]{
+.cMNEPM img{
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
