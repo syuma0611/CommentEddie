@@ -56,7 +56,7 @@
 **************************/
 
 body {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(229 75 75 / 64%);
   margin: 0px auto;
   overflow: hidden;
 }
@@ -68,7 +68,7 @@ body {
 /** ツールバー */
 .MuiToolbar-regular,
 /** ダイス結果、チャット入力欄の削除 */
-.MuiPaper-elevation1,
+.MuiPaper-root > form,
 /** 背景の非表示 */
 #root>div>div:nth-child(2),
 /** 前景全体 */
@@ -184,14 +184,14 @@ p.MuiTypography-root {
 }
 
 /** 成功時の青文字部分 */
-.MuiTypography-colorPrimary {
+.css-1l6qhgm {
   color: var(--font-color-success) !important;
   text-shadow: var(--font-shadow-success) !important;
   font-size: var(--font-size-success) !important;
 }
 
 /* 失敗時の赤字部分 */
-.MuiTypography-colorSecondary {
+.css-1j13mke {
   color: var(--font-color-fail) !important;
   text-shadow: var(--font-shadow-fail) !important;
   font-size: var(--font-size-fail) !important;
