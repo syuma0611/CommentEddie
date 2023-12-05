@@ -150,7 +150,7 @@ hr {
 }
 
 /**　ダイス結果 */
-.MuiList-root > div > div > div > div {
+.MuiList-root > div > div > div {
   padding: var(--background-padding) !important;
   background: var(--background-color) !important;
   border: solid var(--border-width) var(--border-color) !important;
@@ -211,8 +211,8 @@ hr {
 }
 
 /** ダイス結果のスクロールを発生させないよう高さを指定 */
-.MuiList-root > div > div > div {
-  height: auto !important;
+.MuiList-root > div > div {
+  height: 100% !important;
   position: absolute !important;
   /** ダイス結果の上揃え、下揃えを設定 */
   top: var(--is-top) !important;
@@ -321,9 +321,10 @@ span.MuiTypography-root.MuiTypography-caption {
 
 /*--------------メインウィンドウ風に記載するcss----------------*/
 /*表示件数*/
-.MuiList-root>div>div>div>div:nth-last-child(-n+1) {
+.MuiList-root>div>div>div:nth-last-child(-n+1) {
     display: block !important;
 }
+
 
 :root {
   /** ウィンドウの高さ */
@@ -373,24 +374,25 @@ span.MuiTypography-root.MuiTypography-caption {
 
 /**関係ないものを非表示*/
 .MuiToolbar-dense,
-.sc-dSuTWQ,
-.sc-gswEsP,
-.sc-hlXyLs{
+.sc-hoPtna,
+.sc-leeitB,
+.sc-hlXyLs
+{
  display: none !important;
 }
 
 /** 新ダイス表記の非表示 */
-.sc-bPPhlf{
+.sc-gswEsP{
   display: none;
 } 
 
 
-.cMNEPM img{
+.gkRMkm img{
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
 
-.cMNEPM {
+.gkRMkm {
   /** 上下位置の調整 */
   bottom: var(--dice-Y) !important;
   /** 右側のスペースの幅 */
