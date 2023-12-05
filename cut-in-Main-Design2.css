@@ -1,5 +1,5 @@
 /*表示件数*/
-.MuiList-root>div>div>div>div:nth-last-child(-n+1) {
+.MuiList-root>div>div>div:nth-last-child(-n+1) {
     display: block !important;
 }
 
